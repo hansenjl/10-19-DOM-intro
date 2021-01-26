@@ -200,9 +200,9 @@ container.removeChild(containerPTag) //removes the child p tag
 
 ---
 
-### Adding Some Dank Memes to the Page
+### Adding Some Memes to the Page
 
-- If you look at the `index.html`, there are **two** JavaScript files being loaded: `index.js` and `dankMemes.js`. We can use JavaScript to create image tags, set the urls based on the array of strings found in `dankMemes.js` and add those `<img></img>` tags to the page.
+- If you look at the `index.html`, there are **two** JavaScript files being loaded: `index.js` and `memes.js`. We can use JavaScript to create image tags, set the urls based on the array of strings found in `memes.js` and add those `<img></img>` tags to the page.
   - First we'll need to find the container to which we'll append the images:
 
 ```js
@@ -212,7 +212,7 @@ const imgContainer = document.querySelector('#container')
   - Then we'll iterate over the array of memes and create a new `<img></img>` tag **forEach** 🧐 element in the array:
 
 ```js
-dankMemes.forEach(function(memeUrlString) {
+memes.forEach(function(memeUrlString) {
   const newImgTag = document.createElement('img') //create a new img tag
   newImgTag.src = memeUrlString //set the src for that img
   imgContainer.appendChild(newImgTag) //add the img tag to the DOM
